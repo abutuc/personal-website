@@ -1,9 +1,9 @@
-import Me from "./pages/Me";
+import NewPage from "./pages/NewPage";
 
 function App() {
   return (
     <>
-      <Me />
+      <NewPage />
     </>
   );
 }
