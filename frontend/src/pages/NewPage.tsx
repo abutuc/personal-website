@@ -613,7 +613,7 @@ function SkillsSection() {
           {skills.map(({ title, icon, points, color }, idx) => (
             <div
               key={title}
-              className="group relative bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-3xl p-8 border border-indigo-500/20 hover:border-indigo-500/40 shadow-xl hover:shadow-2xl hover:shadow-indigo-500/20 transition-all duration-500 hover:-translate-y-3 overflow-hidden animate-slideIn"
+              className="group relative bg-gradient-to-br from-gray-800/50 to-gray-900/50 rounded-3xl p-8 border border-indigo-500/20 hover:border-indigo-500/40 shadow-xl hover:shadow-2xl hover:shadow-indigo-500/20 overflow-hidden"
               style={{ animationDelay: `${idx * 0.15}s` }}
             >
               <div
@@ -623,21 +623,16 @@ function SkillsSection() {
               <div className="relative">
                 <div className="flex items-center gap-4 mb-6">
                   <div
-                    className={`p-4 bg-gradient-to-br ${color} rounded-2xl shadow-lg text-white transform group-hover:scale-110 group-hover:rotate-6 transition-all duration-500`}
+                    className={`p-4 bg-gradient-to-br ${color} rounded-2xl shadow-lg text-white`}
                   >
                     {icon}
                   </div>
-                  <h3 className="text-2xl font-bold text-white group-hover:text-indigo-300 transition-colors">
-                    {title}
-                  </h3>
+                  <h3 className="text-2xl font-bold text-white">{title}</h3>
                 </div>
 
                 <ul className="space-y-4">
                   {points.map((point, idx) => (
-                    <li
-                      key={idx}
-                      className="flex items-start text-gray-300 group-hover:text-gray-200 transition-colors"
-                    >
+                    <li key={idx} className="flex items-start text-gray-300">
                       <span
                         className={`inline-block w-2 h-2 rounded-full bg-gradient-to-r ${color} mt-2 mr-4 flex-shrink-0`}
                       ></span>
